@@ -11,6 +11,7 @@ Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
 Plugin 'tpope/vim-fugitive'
 Plugin 'kien/ctrlp.vim'
+Plugin 'townk/vim-autoclose'
 
 
 set laststatus=2
@@ -22,6 +23,7 @@ let g:airline#extensions#branch#enabled=1
 call vundle#end()
 
 set number
+set background=dark
 colorscheme papercolor
 autocmd StdinReadPre * let s:std_in=1
 autocmd VimEnter * if argc() == 1 && isdirectory(argv()[0]) && !exists("s:std_in") | exe 'NERDTree' argv()[0] | wincmd p | ene | exe 'cd '.argv()[0] | endif
