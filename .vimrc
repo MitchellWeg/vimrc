@@ -3,12 +3,16 @@ set tabstop=4
 set shiftwidth=4
 set smartindent
 
+let g:python3_host_prog = '/usr/bin/python3'
+let g:vimspector_enable_mappings= 'VISUAL_STUDIO'
+
 call plug#begin('~/.vim/plugged')
 
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'rust-lang/rust.vim'
 Plug 'vim-syntastic/syntastic'
 Plug 'preservim/nerdcommenter'
+Plug 'puremourning/vimspector', {'do': './install_gadget.py --enable-c --enable-python'}
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
 call plug#end()
